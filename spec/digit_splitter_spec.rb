@@ -1,3 +1,4 @@
+require "spec_helper"
 require "digit_splitter"
 
 describe DigitSplitter do
