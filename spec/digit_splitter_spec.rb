@@ -38,10 +38,10 @@ describe DigitSplitter do
             "|_ "]
              ]
 
-    expect(splitter.split).to eq(resultado)
+    expect(splitter.split).to represent(resultado)
   end
   
-  it "convierte 123456789 a areglo bidimensional" do
+  it "convierte 123456789 a arreglo bidimensional" do
     entrada = [ "    _  _     _  _  _  _  _ ",
                 "  | _| _||_||_ |_   ||_||_|",
                 "  ||_  _|  | _||_|  ||_| _|"] 
@@ -64,7 +64,7 @@ describe DigitSplitter do
             "|_ ",
             " _|"],            
            [" _ ",
-            "|_  ",
+            "|_ ",
             "|_|"], 
            [" _ ",
             "  |",
@@ -77,7 +77,7 @@ describe DigitSplitter do
             " _|"]
              ]
 
-    expect(splitter.split).to eq(resultado)
+    expect(splitter.split).to represent(resultado)
   end
   
   it "convierte 234234234 a areglo bidimensional" do
@@ -115,7 +115,7 @@ describe DigitSplitter do
             "  |"]
              ]
 
-    expect(splitter.split).to eq(resultado)
+    expect(splitter.split).to represent(resultado)
   end
   
   it "convierte 214234234 a arreglo bidmensional" do
@@ -152,7 +152,7 @@ describe DigitSplitter do
             "|_|",
             "  |"]
              ]
-    expect(splitter.split).to eq(resultado)
+    expect(splitter.split).to represent(resultado)
   end
   
   it "convierte 254234234 a arreglo bidmensional" do
@@ -189,9 +189,10 @@ describe DigitSplitter do
             "|_|",
             "  |"]
              ]
-    expect(splitter.split).to eq(resultado)
+    expect(splitter.split).to represent(resultado)
   end
-    xit "convierte 258234234 a arreglo bidmensional" do
+  
+  it "convierte 258234234 a arreglo bidmensional" do
       entrada =  [ " _  _  _  _  _     _  _    ",
                    " _||_ |_| _| _||_| _| _||_|",
                    "|_  _||_||_  _|  ||_  _|  |"] 
@@ -225,6 +226,6 @@ describe DigitSplitter do
             "|_|",
             "  |"]
              ]
-    expect(splitter.split).to eq(resultado)
+    expect(splitter.split).to represent(resultado)
   end
 end
