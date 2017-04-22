@@ -1,17 +1,12 @@
 class AccountParser
- 
+  attr_reader :digit_splitter
+
   def initialize(cuenta)
     @cuenta=cuenta
+    @digit_splitter = DigitSplitter.new(@cuenta)
   end
-  
+
   def parse
-     datos =  [ "    _  _     _  _  _  _  _ ",
-                "  | _| _||_||_ |_   ||_||_|",
-                "  ||_  _|  | _||_|  ||_| _|"] 
-    if @cuenta == datos 
-      "123456789"
-    else 
-      "123456709"
-    end
+    digit_splitter.split.map { | digit | DigitParser.new(digit).convert }.join
   end
 end
