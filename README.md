@@ -1,2 +1,2 @@
 # banco
-trivia banco ruby y rspec
+Kata banco ruby y rspec
